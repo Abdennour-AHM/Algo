@@ -1,0 +1,30 @@
+Begin
+    Declare c as Character
+    Declare length, words, vowels as Integer
+    length ← 0
+    words ← 0
+    vowels ← 0
+
+    Read(c)
+
+    While c ≠ '.' Do
+        length ← length + 1
+
+        If c = ' ' Then
+            words ← words + 1
+        EndIf
+
+        If c = 'a' OR c = 'e' OR c = 'i' OR c = 'o' OR c = 'u'
+           OR c = 'A' OR c = 'E' OR c = 'I' OR c = 'O' OR c = 'U' Then
+            vowels ← vowels + 1
+        EndIf
+
+        Read(c)
+    EndWhile
+
+    words ← words + 1   // last word has no trailing space
+
+    Write("Length: ", length)
+    Write("Words: ", words)
+    Write("Vowels: ", vowels)
+End
